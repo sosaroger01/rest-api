@@ -2,8 +2,6 @@ const {response} = require("express");
 const bcryptjs=require("bcryptjs");
 
 const User=require("../models/user"); 
-const user = require("../models/user");
-
 
 const get= async (req, res=response) => {
 
@@ -33,7 +31,6 @@ const get= async (req, res=response) => {
 }
 
 const store= async(req, res=response) => {
-
     const {name,email,role,password}=req.body;
     const user=new User( {name,email,role,password} );
 
