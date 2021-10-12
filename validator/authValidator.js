@@ -18,7 +18,20 @@ const loginValidator=checkSchema({
     }
 });
 
+/**
+ * Schema creado para validar el request de autenticacion con google
+ */
+const googleValidator=checkSchema({
+    token:{
+        notEmpty:{
+            bail: true,
+            errorMessage:"El campo token es obligatorio"
+        }
+    }
+});
+
 
 module.exports={
-    loginValidator
+    loginValidator,
+    googleValidator
 }
