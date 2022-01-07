@@ -93,6 +93,12 @@ const searchUser=async (term="",resp=response)=>{
      })
  }
 
+ /**
+  * Metodo generico para realizar busqueda en las colecciones disponibles
+  * @param {*} req 
+  * @param {*} resp 
+  * @returns 
+  */
 const search=async (req,resp=response)=>{
 
     const {collection,term} = req.params;

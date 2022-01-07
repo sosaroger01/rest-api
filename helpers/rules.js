@@ -88,11 +88,19 @@ const existsUserById=async (id )=>{
 
 }
 
+const validCollection= async(collection='',collections=[])=>{
+    if(!collections.includes(collection)){
+        throw new Error(`Debe indicar una de las siguientes colecciones : ${collections}`);
+    }
+    return true;
+}
+
 module.exports={
     isValidRole,
     existsEmail,
     existsUserById,
     existsCategory,
     existsCetagoryById,
-    existsProductById
+    existsProductById,
+    validCollection
 }
